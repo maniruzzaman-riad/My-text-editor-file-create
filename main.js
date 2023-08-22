@@ -38,11 +38,13 @@ document.getElementById('text-justify-btn').addEventListener('click',function(){
 })
 // --------------------last site---------------
 
-document.getElementById('text-size-btn').addEventListener('click',function(){
+document.getElementById('text-size-btn').addEventListener('input',function(){
     const number =document.getElementById('text-size-btn').value;
     const numberConvert = parseInt(number);
     const multiplysize = numberConvert * 7;
-    textArea.style.fontSize = `${multiplysize}px`
+    if(numberConvert > 2 && numberConvert < 16){
+        textArea.style.fontSize = `${multiplysize}px`
+    }
     // console.log(number);
 })
 
