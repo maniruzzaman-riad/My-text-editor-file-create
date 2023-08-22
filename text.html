@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Style of Text Area</title>
+</head>
+<body>
+  <!-- <textarea id="myTextarea">Initial Text</textarea> -->
+  <textarea name="" id="myTextarea" cols="30" rows="10"></textarea>
+  <button id="increaseSizeButton">Increase Font Size</button>
+  <button id="changeColorButton">Change Text Color</button>
+
+  <script>
+    // Get references to the textarea and button elements
+    const textarea = document.getElementById('myTextarea');
+    const increaseSizeButton = document.getElementById('increaseSizeButton');
+    const changeColorButton = document.getElementById('changeColorButton');
+
+    // Add a click event listener to the "Increase Font Size" button
+    increaseSizeButton.addEventListener('click', () => {
+      // Get the current font size of the textarea and increase it
+      const currentSize = parseInt(getComputedStyle(textarea).fontSize);
+      textarea.style.fontSize = (currentSize + 2) + 'px';
+    });
+
+    // Add a click event listener to the "Change Text Color" button
+    changeColorButton.addEventListener('click', () => {
+      // Generate a random color and set it as the text color
+      const randomColor = getRandomColor();
+      textarea.style.color = randomColor;
+    });
+
+    // Function to generate a random color in hex format
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>

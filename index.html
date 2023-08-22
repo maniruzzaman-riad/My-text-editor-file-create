@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7753384c3d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <div class="bg-sky-400 w-5/6 mx-auto p-5 rounded-lg mt-5">
+            <h2 class="text-3xl font-semibold text-center mb-5">My Text Editor</h2>
+            <h2 class="text-2xl font-bold text-center text-purple-800">Made By <span class="">Developer</span> <span class="text-black italic text-3xl font-serif"> MANIRUZZAMAN RIAD</span></h2>
+            <div class="p-5 w-5/6 mx-auto border-black border-solid border-2 mt-6  bg-sky-200 rounded-md">
+                <div>
+                    <div class="flex justify-around">
+                        <div class="flex gap-4">
+                            <i id="bold-btn" class="fa-solid fa-bold"></i>
+                            <i id="italic-btn" class="fa-solid fa-italic"></i>
+                            <i id="underline-btn" class="fa-solid fa-underline"></i>
+                        </div>
+                        <div class="flex gap-4">
+                            <i id="text-left-btn" class="fa-solid fa-align-left"></i>
+                            <i id="text-center-btn" class="fa-solid fa-align-center"></i>
+                            <i id="text-right-btn" class="fa-solid fa-align-right"></i>
+                            <i id="text-justify-btn" class="fa-solid fa-align-justify"></i>
+                        </div>
+                        <div class="flex gap-4">
+                            <input class=" text-center font-semibold text-xl" type="number" id="text-size-btn" name="quantity" min="3" max="10">
+                            <button id="case-btn" class="text-xl font-medium">aA</button>
+                            <input class="" type="color" name="" id="color-btn">
+                        </div>
+                    </div>
+                </div>
+                <hr class=" my-6 border-t-3 border-black">
+                <textarea class="w-full h-96 p-3" name="" id="text-area-value" cols="" rows=""></textarea>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
